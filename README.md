@@ -1,6 +1,6 @@
 <div align="center">
   <h1>💳 Astrova Pay</h1>
-  <h3>Developed by <a href="[https://astrova.online](https://astrova.online)">Astrova</a></h3>
+  <h3>Developed by <a href="https://astrova.online">Astrova</a></h3>
 
   <p>
     <strong>Egyptian Digital Wallets, Vodafone Cash, InstaPay IPN & Visa Payment Gateway for WooCommerce & Custom Websites</strong><br />
@@ -8,12 +8,12 @@
   </p>
 
   <p>
-    <img src="[https://img.shields.io/badge/Developer-Astrova-0F172A?style=for-the-badge](https://img.shields.io/badge/Developer-Astrova-0F172A?style=for-the-badge)" alt="Developed by Astrova" />
-    <img src="[https://img.shields.io/badge/Release-v1.0.0-0066FF?style=for-the-badge](https://img.shields.io/badge/Release-v1.0.0-0066FF?style=for-the-badge)" alt="Release v1.0.0" />
-    <img src="[https://img.shields.io/badge/WordPress-6.0%2B-21759B?style=for-the-badge&logo=wordpress&logoColor=white](https://img.shields.io/badge/WordPress-6.0%2B-21759B?style=for-the-badge&logo=wordpress&logoColor=white)" alt="WordPress 6.0+" />
-    <img src="[https://img.shields.io/badge/WooCommerce-HPOS%20Ready-96588A?style=for-the-badge&logo=woocommerce&logoColor=white](https://img.shields.io/badge/WooCommerce-HPOS%20Ready-96588A?style=for-the-badge&logo=woocommerce&logoColor=white)" alt="WooCommerce HPOS" />
-    <img src="[https://img.shields.io/badge/API-REST%20%26%20Webhooks-10B981?style=for-the-badge](https://img.shields.io/badge/API-REST%20%26%20Webhooks-10B981?style=for-the-badge)" alt="Universal REST API" />
-    <img src="[https://img.shields.io/badge/License-Proprietary-EF4444?style=for-the-badge](https://img.shields.io/badge/License-Proprietary-EF4444?style=for-the-badge)" alt="Proprietary License" />
+    <kbd>Developer: Astrova</kbd> &nbsp;
+    <kbd>Release: v1.0.0</kbd> &nbsp;
+    <kbd>WordPress: 6.0+</kbd> &nbsp;
+    <kbd>WooCommerce: HPOS Ready</kbd> &nbsp;
+    <kbd>API: REST & Webhooks</kbd> &nbsp;
+    <kbd>License: Proprietary</kbd>
   </p>
 
   <p>
@@ -137,11 +137,11 @@ Engineered by **Astrova** with defense-in-depth security protocols to protect fi
 
 | Resource | Endpoint URL |
 | :--- | :--- |
-| **API Base Server** | `[https://www.astrova.online](https://www.astrova.online)` |
-| **Create Checkout Session (`POST`)** | `[https://www.astrova.online/wp-json/astrova/v1/checkout/session](https://www.astrova.online/wp-json/astrova/v1/checkout/session)` |
-| **Verify Session Status (`GET`)** | `[https://www.astrova.online/wp-json/astrova/v1/checkout/session/](https://www.astrova.online/wp-json/astrova/v1/checkout/session/){session_id}` |
-| **Hosted Checkout Page** | `[https://www.astrova.online/pay/](https://www.astrova.online/pay/){session_id}` |
-| **Merchant Portal & API Keys** | `[https://www.astrova.online/astrova-portal/#licenses-apigateway](https://www.astrova.online/astrova-portal/#licenses-apigateway)` |
+| **API Base Server** | `https://www.astrova.online` |
+| **Create Checkout Session (`POST`)** | `https://www.astrova.online/wp-json/astrova/v1/checkout/session` |
+| **Verify Session Status (`GET`)** | `https://www.astrova.online/wp-json/astrova/v1/checkout/session/{session_id}` |
+| **Hosted Checkout Page** | `https://www.astrova.online/pay/{session_id}` |
+| **Merchant Portal & API Keys** | `https://www.astrova.online/astrova-portal/#licenses-apigateway` |
 
 ---
 
@@ -206,9 +206,9 @@ Authorization: Bearer sk_live_YOUR_SECRET_KEY
   "customer_name": "Customer Full Name",
   "customer_phone": "01000000000",
   "customer_email": "customer@yourdomain.com",
-  "return_url": "https://yourdomain.com/payment/success",
-  "cancel_url": "https://yourdomain.com/payment/failed",
-  "webhook_url": "https://yourdomain.com/api/astrova-webhook"
+  "return_url": "[https://yourdomain.com/payment/success](https://yourdomain.com/payment/success)",
+  "cancel_url": "[https://yourdomain.com/payment/failed](https://yourdomain.com/payment/failed)",
+  "webhook_url": "[https://yourdomain.com/api/astrova-webhook](https://yourdomain.com/api/astrova-webhook)"
 }
 ```
 
@@ -217,7 +217,7 @@ Authorization: Bearer sk_live_YOUR_SECRET_KEY
 {
   "success": true,
   "session_id": "cs_live_9f81a7b489a2b63892",
-  "checkout_url": "https://www.astrova.online/pay/cs_live_9f81a7b489a2b63892",
+  "checkout_url": "[https://www.astrova.online/pay/cs_live_9f81a7b489a2b63892](https://www.astrova.online/pay/cs_live_9f81a7b489a2b63892)",
   "amount": 250.00,
   "currency": "EGP",
   "expires_at": "2026-10-31 14:00:00"
@@ -249,7 +249,7 @@ use Illuminate\Support\Facades\Log;
 
 class ProcessController extends Controller
 {
-    private string $apiEndpoint = 'https://www.astrova.online/wp-json/astrova/v1/checkout/session';
+    private string $apiEndpoint = '[https://www.astrova.online/wp-json/astrova/v1/checkout/session](https://www.astrova.online/wp-json/astrova/v1/checkout/session)';
 
     /**
      * Initiate Deposit & Redirect User to Hosted Checkout
@@ -262,7 +262,7 @@ class ProcessController extends Controller
         try {
             $response = Http::withToken($secretKey)
                 ->timeout(15)
-                ->post('https://www.astrova.online/wp-json/astrova/v1/checkout/session', [
+                ->post('[https://www.astrova.online/wp-json/astrova/v1/checkout/session](https://www.astrova.online/wp-json/astrova/v1/checkout/session)', [
                     'order_id'       => $deposit->trx,
                     'amount'         => round($deposit->final_amo, 2),
                     'currency'       => 'EGP',
@@ -350,7 +350,7 @@ Route::post('ipn/astrovapay', [App\Http\Controllers\Gateway\AstrovaPay\ProcessCo
 #### 1. Initiate Payment (`initiate_payment.php`):
 ```php
 <?php
-$secretKey = 'sk_live_YOUR_SECRET_KEY';$apiUrl    = 'https://www.astrova.online/wp-json/astrova/v1/checkout/session';
+$secretKey = 'sk_live_YOUR_SECRET_KEY';$apiUrl    = '[https://www.astrova.online/wp-json/astrova/v1/checkout/session](https://www.astrova.online/wp-json/astrova/v1/checkout/session)';
 
 $orderId   = 'DEP_' . uniqid();
 $amount    = (float)$_POST['amount'];
@@ -363,9 +363,9 @@ $payload = json_encode([
     'currency'       => 'EGP',
     'customer_name'  => $userName,
     'customer_email' => $userEmail,
-    'return_url'     => 'https://yourdomain.com/addfunds?status=success',
-    'cancel_url'     => 'https://yourdomain.com/addfunds?status=cancel',
-    'webhook_url'    => 'https://yourdomain.com/webhook/astrovapay.php',
+    'return_url'     => '[https://yourdomain.com/addfunds?status=success](https://yourdomain.com/addfunds?status=success)',
+    'cancel_url'     => '[https://yourdomain.com/addfunds?status=cancel](https://yourdomain.com/addfunds?status=cancel)',
+    'webhook_url'    => '[https://yourdomain.com/webhook/astrovapay.php](https://yourdomain.com/webhook/astrovapay.php)',
 ]);
 
 // Save pending transaction in database
@@ -461,7 +461,7 @@ use Illuminate\Http\Request;
 
 class AstrovaPayService
 {
-    private string $baseUrl = 'https://www.astrova.online/wp-json/astrova/v1';
+    private string $baseUrl = '[https://www.astrova.online/wp-json/astrova/v1](https://www.astrova.online/wp-json/astrova/v1)';
     private string $secretKey;
 
     public function __construct()
@@ -518,7 +518,7 @@ const crypto = require('crypto');
 const axios = require('axios');
 
 const app = express();
-const ASTROVA_API_BASE = 'https://www.astrova.online/wp-json/astrova/v1';
+const ASTROVA_API_BASE = '[https://www.astrova.online/wp-json/astrova/v1](https://www.astrova.online/wp-json/astrova/v1)';
 const ASTROVA_SECRET_KEY = process.env.ASTROVA_SECRET_KEY; // sk_live_...
 
 // 1. Create Checkout Session
@@ -526,7 +526,7 @@ app.post('/api/create-checkout', async (req, res) => {
     try {
         const { orderId, amount, customerName, customerPhone } = req.body;
 
-        const response = await axios.post(`${ASTROVA_API_BASE}/checkout/session`, { order_id: orderId, amount: amount, currency: 'EGP', customer_name: customerName, customer_phone: customerPhone, return_url: 'https://yourdomain.com/order-success', cancel_url: 'https://yourdomain.com/order-cancel', webhook_url: 'https://yourdomain.com/api/astrova-webhook' }, { headers: { 'Authorization': `Bearer ${ASTROVA_SECRET_KEY}`,
+        const response = await axios.post(`${ASTROVA_API_BASE}/checkout/session`, { order_id: orderId, amount: amount, currency: 'EGP', customer_name: customerName, customer_phone: customerPhone, return_url: '[https://yourdomain.com/order-success](https://yourdomain.com/order-success)', cancel_url: '[https://yourdomain.com/order-cancel](https://yourdomain.com/order-cancel)', webhook_url: '[https://yourdomain.com/api/astrova-webhook](https://yourdomain.com/api/astrova-webhook)' }, { headers: { 'Authorization': `Bearer ${ASTROVA_SECRET_KEY}`,
                 'Content-Type': 'application/json'
             },
             timeout: 12000
@@ -630,10 +630,10 @@ Receipts are stored in an isolated directory (<code>wp-content/uploads/astrovapa
 ## 📄 License
 
 **Proprietary Commercial Software**  
-This software is exclusively developed, owned, and maintained by **Astrova** (`[https://astrova.online](https://astrova.online)`). Unauthorized copying, redistribution, modification, reverse engineering, or commercial deployment without an active license key issued by **Astrova** is strictly prohibited.
+This software is exclusively developed, owned, and maintained by **Astrova** (`https://astrova.online`). Unauthorized copying, redistribution, modification, reverse engineering, or commercial deployment without an active license key issued by **Astrova** is strictly prohibited.
 
 <div align="center">
   <br />
-  <p>Developed & Engineered by <strong><a href="[https://astrova.online](https://astrova.online)">Astrova</a></strong></p>
+  <p>Developed & Engineered by <strong><a href="https://astrova.online">Astrova</a></strong></p>
   <p><sub>Copyright © 2026 Astrova. All Rights Reserved.</sub></p>
 </div>
