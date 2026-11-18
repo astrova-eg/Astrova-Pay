@@ -7,6 +7,22 @@
     Enterprise-Grade Payment Confirmation, Universal REST API & Financial Reconciliation Engine for Egypt & MENA.
   </p>
 
+  <br />
+
+  <table>
+    <tr>
+      <td align="center" bgcolor="#0066FF">
+        <a href="https://astrova.online/product/astrovapay-woocommerce-payment-gateway/" target="_blank">
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<strong>🚀 GET ASTROVA PAY — OFFICIAL LICENSE & DOWNLOAD</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+          <br /><br />
+        </a>
+      </td>
+    </tr>
+  </table>
+
+  <br />
+
   <p>
     <kbd>Developer: Astrova</kbd> &nbsp;
     <kbd>Release: v1.0.0</kbd> &nbsp;
@@ -113,9 +129,10 @@ Engineered by **Astrova** with defense-in-depth security protocols to protect fi
 
 ## ⚙️ WooCommerce Installation & Setup
 
-### 1. Plugin Installation
-1. Download the `astrova-pay.zip` package or clone this repository into your `/wp-content/plugins/` directory.
-2. Navigate to **WordPress Admin → Plugins** and click **Activate** on **Astrova Pay**.
+### 1. Purchase & Download
+1. Obtain your official commercial license and plugin package from the **[Astrova Official Store](https://astrova.online/product/astrovapay-woocommerce-payment-gateway/)**.
+2. Upload the `astrova-pay.zip` package via **WordPress Admin → Plugins → Add New → Upload Plugin**, or extract it into `/wp-content/plugins/`.
+3. Click **Activate** on **Astrova Pay**.
 
 ### 2. License Activation
 1. Open the **Astrova Pay → License** settings panel.
@@ -633,6 +650,18 @@ Receipts are stored in an isolated directory (<code>wp-content/uploads/astrovapa
 This software is exclusively developed, owned, and maintained by **Astrova** (`https://astrova.online`). Unauthorized copying, redistribution, modification, reverse engineering, or commercial deployment without an active license key issued by **Astrova** is strictly prohibited.
 
 <div align="center">
+  <br />
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://astrova.online/product/astrovapay-woocommerce-payment-gateway/" target="_blank">
+          <br />
+          &nbsp;&nbsp;&nbsp;&nbsp;<strong>💳 PURCHASE COMMERCIAL LICENSE — ASTROVA PAY</strong>&nbsp;&nbsp;&nbsp;&nbsp;
+          <br /><br />
+        </a>
+      </td>
+    </tr>
+  </table>
   <br />
   <p>Developed & Engineered by <strong><a href="https://astrova.online">Astrova</a></strong></p>
   <p><sub>Copyright © 2026 Astrova. All Rights Reserved.</sub></p>
