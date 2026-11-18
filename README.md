@@ -1,12 +1,10 @@
 <div align="center">
-  <img src="https://astrova.online/assets/astrova-pay-logo.png" alt="Astrova Pay by Astrova" width="130" />
-
   <h1>💳 Astrova Pay</h1>
   <h3>Developed by <a href="https://astrova.online">Astrova</a></h3>
 
   <p>
-    <strong>Enterprise-Grade Payment Gateway & Financial Reconciliation Engine for Egypt & MENA</strong><br />
-    Seamlessly accept <strong>Egyptian Mobile Wallets</strong>, <strong>InstaPay</strong>, and <strong>Visa/Mastercard</strong> across <strong>WooCommerce</strong> & <strong>Custom-Built Websites</strong>.
+    <strong>Egyptian Digital Wallets, Vodafone Cash, InstaPay IPN & Visa Payment Gateway for WooCommerce & Custom Websites</strong><br />
+    Enterprise-Grade Payment Confirmation & Financial Reconciliation Engine for Egypt & MENA.
   </p>
 
   <p>
@@ -24,7 +22,6 @@
     <a href="#-key-features">Features</a> •
     <a href="#-bank-grade-security">Security</a> •
     <a href="#-installation--setup">Installation</a> •
-    <a href="#-screenshots">Screenshots</a> •
     <a href="#-frequently-asked-questions">FAQ</a> •
     <a href="#-license">License</a>
   </p>
@@ -45,13 +42,13 @@ Architected with a decoupled, modular core, **Astrova Pay** operates natively in
 <table>
   <tr>
     <td align="center" width="33%">
-      <h3>📱 Egyptian Mobile Wallets</h3>
+      <h3>📱 Egyptian Digital Wallets</h3>
       <p>Instant wallet-to-wallet transfers across all major telecom and bank wallets in Egypt:</p>
       <p><strong>Vodafone Cash • Etisalat Cash<br />Orange Cash • WE Pay • Meeza Wallets</strong></p>
     </td>
     <td align="center" width="33%">
-      <h3>⚡ InstaPay (IPA)</h3>
-      <p>Real-time interbank transfers via Instant Payment Address (IPA) or bank account number with one-click copy functionality and instant reference logging.</p>
+      <h3>⚡ InstaPay IPN</h3>
+      <p>Real-time interbank transfers via Instant Payment Address (IPA) or bank account number with one-click copy functionality and instant notification logging.</p>
     </td>
     <td align="center" width="33%">
       <h3>💳 Visa & Mastercard</h3>
@@ -131,39 +128,6 @@ Engineered by **Astrova** with defense-in-depth security protocols to protect fi
 
 ---
 
-## 📸 Screenshots
-
-<div align="center">
-  <table>
-    <tr>
-      <td align="center" width="50%">
-        <img src="screenshots/checkout.png" alt="Customer Checkout Experience" width="100%" /><br />
-        <strong>1. Customer Checkout Experience</strong><br />
-        <sub>Clear transfer instructions with one-click wallet/IPA copy button</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="screenshots/thank-you.png" alt="Order Received & Proof Upload" width="100%" /><br />
-        <strong>2. Order Received & Proof Upload</strong><br />
-        <sub>Frictionless transaction reference input & receipt submission form</sub>
-      </td>
-    </tr>
-    <tr>
-      <td align="center" width="50%">
-        <img src="screenshots/dashboard.png" alt="Merchant Administrative Dashboard" width="100%" /><br />
-        <strong>3. Merchant Administrative Dashboard</strong><br />
-        <sub>Real-time financial KPI metrics and pending verification queue</sub>
-      </td>
-      <td align="center" width="50%">
-        <img src="screenshots/reconciliation.png" alt="Single-Screen Reconciliation" width="100%" /><br />
-        <strong>4. Single-Screen Reconciliation</strong><br />
-        <sub>Side-by-side amount verification and secure receipt preview</sub>
-      </td>
-    </tr>
-  </table>
-</div>
-
----
-
 ## ❓ Frequently Asked Questions
 
 <details>
@@ -201,7 +165,7 @@ Receipts are stored in an isolated directory (<code>wp-content/uploads/astrovapa
 ## 📝 Changelog
 
 ### `1.0.0` — Initial Commercial Release
-* **Core:** Initial commercial release of **Astrova Pay** by **Astrova**, supporting Egyptian Mobile Wallets, InstaPay, and Visa/Mastercard.
+* **Core:** Initial commercial release of **Astrova Pay** by **Astrova**, supporting Egyptian Digital Wallets, Vodafone Cash, InstaPay IPN, and Visa/Mastercard.
 * **Compatibility:** Full WooCommerce HPOS & Checkout Blocks (`@woocommerce/blocks-checkout`) integration, plus Custom Site activation support.
 * **Security:** Fortified receipt storage with MIME Magic Bytes verification, Anti-IDOR / Path Traversal immune secure file streamer, and transient sliding rate limiter with IP salting.
 * **Auditing:** Bank-grade financial state machine and immutable append-only forensic audit trail.
